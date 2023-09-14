@@ -1,12 +1,13 @@
 import React from "react";
-import { View } from "react-native";
-import CoffeeList from "./CoffeeList";
+import WhereBtn from "./WhereBtn";
+import StyledView from "./StyledView";
+import { Alert, TouchableNativeFeedback } from "react-native";
 
 const Main = () => {
   return (
-    <View>
-      <CoffeeList />
-    </View>
+    <StyledView>
+      <WhereBtn />
+    </StyledView>
   );
 };
 

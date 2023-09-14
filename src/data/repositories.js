@@ -26,6 +26,6 @@ export default [
     id: "5",
     fullname: "Café con leche",
     description:
-      "Se agrega una carga mayor de leche en comparación con el cortado",
+      "Se agrega una carga mayor de leche en comparación con el cortadoasd",
   },
 ];
