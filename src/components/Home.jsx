@@ -1,7 +1,7 @@
 import React from "react";
 import StyledText from "./StyledText";
 import StyledView from "./StyledView";
-import { TouchableNativeFeedback, Alert } from "react-native";
+import { TouchableNativeFeedback } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const WhereBtn = () => {
