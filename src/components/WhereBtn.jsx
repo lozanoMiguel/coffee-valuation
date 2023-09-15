@@ -2,8 +2,10 @@ import React from "react";
 import StyledText from "./StyledText";
 import StyledView from "./StyledView";
 import { TouchableNativeFeedback, Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const WhereBtn = () => {
+  const navigation = useNavigation();
   return (
     <StyledView
       height={"child"}
@@ -14,7 +16,9 @@ const WhereBtn = () => {
       borderTopLeftRadius={"bordertopleftradius"}
       borderTopRightRadius={"bordertoprightradius"}
     >
-      <TouchableNativeFeedback onPress={() => Alert.alert("Yendo")}>
+      <TouchableNativeFeedback
+        onPress={() => navigation.navigate("CoffeeShop")}
+      >
         <StyledText>Where are you?</StyledText>
       </TouchableNativeFeedback>
     </StyledView>
