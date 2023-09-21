@@ -1,9 +1,9 @@
 import React from "react";
 import Home from "./Home";
 import CoffeeShopList from "./CoffeeShopList";
-import StyledView from "./StyledView";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import StyledText from "./StyledText";
+import StyledView from "./StyledView";
 
 const Stack = createNativeStackNavigator();
 
