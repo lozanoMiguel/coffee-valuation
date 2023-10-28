@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     justifyContent: theme.justifyContent.center,
     alignItems: theme.alignItems.center,
     flexDirection: theme.flexDirection.column,
-    borderColor: theme.color.red,
     width: theme.width.father,
     height: theme.height.father,
     paddingRight: theme.padding.paddingRight,

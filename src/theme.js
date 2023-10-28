@@ -2,6 +2,10 @@ const theme = {
   color: {
     white: "#FFFFFF",
     red: "#FF0000",
+    dark: "#271605",
+  },
+  textAlign: {
+    center: "center",
   },
   fontSizes: {
     title: 30,

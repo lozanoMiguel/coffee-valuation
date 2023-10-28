@@ -7,9 +7,13 @@ const styles = StyleSheet.create({
     color: theme.color.red,
     fontSize: theme.fontSizes.title,
     fontWeight: theme.fontWeight.bold,
+    textAlign: theme.textAlign.center,
   },
-  textColor: {
+  textColorWhite: {
     color: theme.color.white,
+  },
+  textColorDark: {
+    color: theme.color.dark,
   },
 });
 
@@ -22,7 +26,11 @@ export default function StyledText({
   style,
   ...restOfProps
 }) {
-  const textStyle = [styles.text, color === "white" && styles.textColor];
+  const textStyle = [
+    styles.text,
+    color === "white" && styles.textColorWhite,
+    color === "dark" && styles.textColorDark,
+  ];
 
   return (
     <Text style={textStyle} {...restOfProps}>
