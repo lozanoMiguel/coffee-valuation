@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import StyledText from "./StyledText";
 import StyledView from "./StyledView";
-import { TouchableNativeFeedback, TextInput } from "react-native";
+import { TouchableNativeFeedback, TextInput, Text, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
+  const [nameFilter, setNameFilter] = useState("");
   const navigation = useNavigation();
   return (
     <StyledView>
@@ -12,8 +13,19 @@ const Home = () => {
         <StyledText color={"dark"}>
           In which coffee shop are you located?
         </StyledText>
-        <TextInput placeholder="Buscar por nombre" />
+        <TextInput
+          placeholder="Coffee shop"
+          style={{ fontSize: 20 }}
+          value={nameFilter}
+          onChangeText={(text) => setNameFilter(text)}
+        />
       </StyledView>
+      <Button
+        title="Search"
+        onPress={() =>
+          navigation.navigate("CoffeeShop", { coffeeName: nameFilter })
+        }
+      ></Button>
     </StyledView>
   );
 };
