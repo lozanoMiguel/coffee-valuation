@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   textColorDark: {
     color: theme.color.dark,
   },
+  fontSizesBody: {
+    fontSize: theme.fontSizes.body,
+  },
 });
 
 export default function StyledText({
@@ -30,6 +33,7 @@ export default function StyledText({
     styles.text,
     color === "white" && styles.textColorWhite,
     color === "dark" && styles.textColorDark,
+    fontSize === "body" && styles.fontSizesBody,
   ];
 
   return (
