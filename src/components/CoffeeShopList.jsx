@@ -30,7 +30,12 @@ const CoffeeShopList = ({ navigation, route }) => {
 
       if (response.status === 200) {
         const data = response.data.businesses;
-        setCafeterias((prevCafeterias) => [...prevCafeterias, ...data]);
+        for (let i = 0; i < data.length; i++) {
+          let coffee = data[i].name.toLowerCase();
+          if (coffee.includes(variable)) {
+            setCafeterias((cafeterias) => [...cafeterias, data[i]]);
+          }
+        }
       } else {
         console.error(`Error en la solicitud: ${response.status}`);
       }
@@ -54,6 +59,7 @@ const CoffeeShopList = ({ navigation, route }) => {
           </View>
         )}
       />
+      <View>{console.log("total: ", cafeterias.length)}</View>
     </StyledView>
   );
 };
