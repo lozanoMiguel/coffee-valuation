@@ -5,6 +5,7 @@ import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
 import CoffeeItem from "./CoffeeItem";
 import StyledText from "./StyledText";
 import backgroundCoffeeList from "../../assets/images/backgroundCoffeeList.jpg";
+import { CarFilled } from "@ant-design/icons";
 
 const CoffeeShopList = ({ navigation, route }) => {
   let variable = route.params.coffeeName;
@@ -34,6 +35,7 @@ const CoffeeShopList = ({ navigation, route }) => {
 
       if (response.status === 200) {
         const data = response.data.businesses;
+        console.log(cafeterias.length);
         for (let i = 0; i < data.length; i++) {
           let coffee = data[i].name.toLowerCase();
 
