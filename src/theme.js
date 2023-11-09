@@ -3,6 +3,7 @@ const theme = {
     white: "#FFFFFF",
     red: "#FF0000",
     dark: "#271605",
+    sand: "#F5F2E5",
   },
   textAlign: {
     center: "center",

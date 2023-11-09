@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   textColorDark: {
     color: theme.color.dark,
   },
+  textColorSand: {
+    color: theme.color.sand,
+  },
   fontSizesBody: {
     fontSize: theme.fontSizes.body,
   },
@@ -33,6 +36,7 @@ export default function StyledText({
     styles.text,
     color === "white" && styles.textColorWhite,
     color === "dark" && styles.textColorDark,
+    color === "sand" && styles.textColorSand,
     fontSize === "body" && styles.fontSizesBody,
   ];
 

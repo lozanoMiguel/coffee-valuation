@@ -6,7 +6,7 @@ const CoffeeItem = (props) => {
   return (
     <View style={styles.container}>
       <Pressable style={styles.button}>
-        <StyledText color={"white"} fontSize={"body"}>
+        <StyledText color={"sand"} fontSize={"body"}>
           {props.location}
         </StyledText>
       </Pressable>
@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 4,
-    elevation: 3,
+
     padding: 5,
-    backgroundColor: "black",
+    backgroundColor: "transparent",
     margin: 5,
   },
 });

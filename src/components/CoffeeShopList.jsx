@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { View, Text, FlatList, StyleSheet } from "react-native";
-import StyledView from "./StyledView";
+import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
 import CoffeeItem from "./CoffeeItem";
 import StyledText from "./StyledText";
+import backgroundCoffeeList from "../../assets/images/backgroundCoffeeList.jpg";
 
 const CoffeeShopList = ({ navigation, route }) => {
   let variable = route.params.coffeeName;
@@ -36,7 +36,8 @@ const CoffeeShopList = ({ navigation, route }) => {
         const data = response.data.businesses;
         for (let i = 0; i < data.length; i++) {
           let coffee = data[i].name.toLowerCase();
-          if (coffee.includes(variable)) {
+
+          if (coffee.includes(variable.toLowerCase())) {
             setCafeterias((cafeterias) => [...cafeterias, data[i]]);
           }
         }
@@ -54,15 +55,20 @@ const CoffeeShopList = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <StyledText color={"dark"}>{title}</StyledText>
-      <FlatList
-        data={cafeterias}
-        renderItem={({ item }) => (
-          <View key={item.id}>
-            <CoffeeItem location={item.location.address1}></CoffeeItem>
-          </View>
-        )}
-      />
+      <ImageBackground
+        source={backgroundCoffeeList}
+        style={styles.backgroundCoffeeList}
+      >
+        <StyledText color={"sand"}>{title}</StyledText>
+        <FlatList
+          data={cafeterias}
+          renderItem={({ item }) => (
+            <View key={item.id}>
+              <CoffeeItem location={item.location.address1}></CoffeeItem>
+            </View>
+          )}
+        />
+      </ImageBackground>
     </View>
   );
 };
@@ -73,6 +79,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: "100%",
+  },
+  backgroundCoffeeList: {
+    height: "100%",
+    width: "100%",
+    justifyContent: "center",
   },
 });
 
