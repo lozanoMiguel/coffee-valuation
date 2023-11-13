@@ -1,18 +1,90 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, ImageBackground, StyleSheet } from "react-native";
 import repositories from "../data/repositories";
+import backgroundCoffeList2 from "../../assets/images/backgroundCoffeeList2.jpg";
+import StyledText from "./StyledText";
 
 const CoffeeList = () => {
   return (
-    <View>
-      {repositories.map((repo) => (
-        <View key={repo.fullname}>
-          <Text>{repo.fullname}</Text>
-          <Text>{repo.description}</Text>
+    <View style={styles.container}>
+      <ImageBackground
+        source={backgroundCoffeList2}
+        style={styles.backgroundCoffeList}
+      >
+        <View style={styles.containerCoffeeTitle}>
+          <StyledText color={"sand"} fontSize={"title"}>
+            Coffee evaluation
+          </StyledText>
         </View>
-      ))}
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Café solo
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Cortado
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Americano
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Cafe con leche
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Flat white
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Capuchino
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Moka latte
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Caramel latte
+          </StyledText>
+        </View>
+        <View style={styles.containerCoffeeItem}>
+          <StyledText color={"sand"} fontSize={"body"}>
+            Vanilla latte
+          </StyledText>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    height: "100%",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  backgroundCoffeList: {
+    height: "100%",
+    width: "100%",
+  },
+  containerCoffeeTitle: {
+    marginBottom: 10,
+  },
+  containerCoffeeItem: {
+    alignSelf: "flex-start",
+    marginLeft: 10,
+    marginBottom: 7,
+  },
+});
 
 export default CoffeeList;

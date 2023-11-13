@@ -4,8 +4,7 @@ import axios from "axios";
 import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
 import CoffeeItem from "./CoffeeItem";
 import StyledText from "./StyledText";
-import backgroundCoffeeList from "../../assets/images/backgroundCoffeeList.jpg";
-import { CarFilled } from "@ant-design/icons";
+import backgroundCoffeeShopList from "../../assets/images/backgroundCoffeeShopList.jpg";
 
 const CoffeeShopList = ({ navigation, route }) => {
   let variable = route.params.coffeeName;
@@ -58,8 +57,8 @@ const CoffeeShopList = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={backgroundCoffeeList}
-        style={styles.backgroundCoffeeList}
+        source={backgroundCoffeeShopList}
+        style={styles.backgroundCoffeeShopList}
       >
         <StyledText color={"sand"}>{title}</StyledText>
         <FlatList
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: "100%",
   },
-  backgroundCoffeeList: {
+  backgroundCoffeeShopList: {
     height: "100%",
     width: "100%",
     justifyContent: "center",

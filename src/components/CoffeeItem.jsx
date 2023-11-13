@@ -1,11 +1,16 @@
 import React from "react";
-import { View, StyleSheet, Pressable, Text } from "react-native";
+import { View, StyleSheet, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import StyledText from "./StyledText";
 
 const CoffeeItem = (props) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Pressable style={styles.button}>
+      <Pressable
+        onPress={() => navigation.navigate("CoffeeList")}
+        style={styles.button}
+      >
         <StyledText color={"sand"} fontSize={"body"}>
           {props.location}
         </StyledText>
