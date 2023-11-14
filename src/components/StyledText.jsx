@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
   fontSizesBody: {
     fontSize: theme.fontSizes.body,
   },
+  fontSizeSubTitle: {
+    fontSize: theme.fontSizes.subTitle,
+  },
 });
 
 export default function StyledText({
@@ -38,6 +41,7 @@ export default function StyledText({
     color === "dark" && styles.textColorDark,
     color === "sand" && styles.textColorSand,
     fontSize === "body" && styles.fontSizesBody,
+    fontSize === "subTitle" && styles.fontSizeSubTitle,
   ];
 
   return (

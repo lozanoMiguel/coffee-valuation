@@ -5,10 +5,16 @@ import StyledText from "./StyledText";
 
 const CoffeeItem = (props) => {
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Pressable
-        onPress={() => navigation.navigate("CoffeeList")}
+        onPress={() =>
+          navigation.navigate("Options", {
+            coffeeShop: props.title,
+            location: props.location,
+          })
+        }
         style={styles.button}
       >
         <StyledText color={"sand"} fontSize={"body"}>

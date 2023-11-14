@@ -1,19 +1,18 @@
 import React from "react";
 import { View, ImageBackground, StyleSheet } from "react-native";
-import repositories from "../data/repositories";
-import backgroundCoffeList2 from "../../assets/images/backgroundCoffeeList2.jpg";
+import coffeeValuation from "../../assets/images/coffeeValuation.jpg";
 import StyledText from "./StyledText";
 
 const CoffeeList = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={backgroundCoffeList2}
+        source={coffeeValuation}
         style={styles.backgroundCoffeList}
       >
         <View style={styles.containerCoffeeTitle}>
           <StyledText color={"sand"} fontSize={"title"}>
-            Coffee evaluation
+            Coffee raiting
           </StyledText>
         </View>
         <View style={styles.containerCoffeeItem}>

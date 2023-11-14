@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
-import CoffeeItem from "./CoffeeItem";
+import CoffeeShopItem from "./CoffeeShopItem";
 import StyledText from "./StyledText";
 import backgroundCoffeeShopList from "../../assets/images/backgroundCoffeeShopList.jpg";
 
@@ -34,7 +34,6 @@ const CoffeeShopList = ({ navigation, route }) => {
 
       if (response.status === 200) {
         const data = response.data.businesses;
-        console.log(cafeterias.length);
         for (let i = 0; i < data.length; i++) {
           let coffee = data[i].name.toLowerCase();
 
@@ -65,7 +64,10 @@ const CoffeeShopList = ({ navigation, route }) => {
           data={cafeterias}
           renderItem={({ item }) => (
             <View key={item.id}>
-              <CoffeeItem location={item.location.address1}></CoffeeItem>
+              <CoffeeShopItem
+                location={item.location.address1}
+                title={title}
+              ></CoffeeShopItem>
             </View>
           )}
         />

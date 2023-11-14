@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import StyledText from "./StyledText";
-import StyledView from "./StyledView";
 import {
   TextInput,
   View,
@@ -37,7 +36,7 @@ const Home = () => {
           />
           <Pressable
             onPress={() =>
-              navigation.navigate("CoffeeShop", { coffeeName: nameFilter })
+              navigation.navigate("Coffee Shop", { coffeeName: nameFilter })
             }
           >
             <FontAwesome name="search" style={styles.search} />
