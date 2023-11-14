@@ -2,6 +2,7 @@ import React from "react";
 import { View, ImageBackground, StyleSheet } from "react-native";
 import coffeeValuation from "../../assets/images/coffeeValuation.jpg";
 import StyledText from "./StyledText";
+import CoffeeListItem from "./CoffeeListItem";
 
 const CoffeeList = () => {
   return (
@@ -15,51 +16,51 @@ const CoffeeList = () => {
             Coffee raiting
           </StyledText>
         </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Café solo
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Cortado
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Americano
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Cafe con leche
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Flat white
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Capuchino
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Moka latte
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Caramel latte
-          </StyledText>
-        </View>
-        <View style={styles.containerCoffeeItem}>
-          <StyledText color={"sand"} fontSize={"body"}>
-            Vanilla latte
-          </StyledText>
-        </View>
+        <CoffeeListItem
+          item={"Café solo"}
+          votes={"1"}
+          average={"5"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Cortado"}
+          votes={"6"}
+          average={"9"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Americano"}
+          votes={"8"}
+          average={"10"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Café con leche"}
+          votes={"20"}
+          average={"8.5"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Flat white"}
+          votes={"20"}
+          average={"8.5"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Capuchino"}
+          votes={"30"}
+          average={"8.5"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Moka late"}
+          votes={"30"}
+          average={"8.5"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Caramel late"}
+          votes={"18"}
+          average={"7"}
+        ></CoffeeListItem>
+        <CoffeeListItem
+          item={"Vanilla late"}
+          votes={"12"}
+          average={"7"}
+        ></CoffeeListItem>
       </ImageBackground>
     </View>
   );
@@ -78,11 +79,6 @@ const styles = StyleSheet.create({
   },
   containerCoffeeTitle: {
     marginBottom: 10,
-  },
-  containerCoffeeItem: {
-    alignSelf: "flex-start",
-    marginLeft: 10,
-    marginBottom: 7,
   },
 });
 
