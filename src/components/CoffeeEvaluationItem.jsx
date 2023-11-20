@@ -13,6 +13,7 @@ const CoffeeEvaluationItem = (props) => {
       </View>
       <View style={styles.inputRange}>
         <NumericInput
+          type="plus-minus"
           containerStyle={{ backgroundColor: "black", marginLeft: 30 }}
           onChange={(value) => console.log(value)}
           minValue={1}
@@ -21,8 +22,8 @@ const CoffeeEvaluationItem = (props) => {
           iconStyle={{ color: "white" }}
           rightButtonBackgroundColor="black"
           leftButtonBackgroundColor="black"
-          totalWidth={65}
-          totalHeight={35}
+          totalWidth={75}
+          totalHeight={40}
         />
       </View>
     </View>

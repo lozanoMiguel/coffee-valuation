@@ -8,7 +8,7 @@ import {
   ImageBackground,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import backgroundCoffeHome from "../../assets/images/backgroundCoffee.jpg";
+import backgroundCoffeHome from "../../assets/images/background1.jpeg";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 const Home = () => {

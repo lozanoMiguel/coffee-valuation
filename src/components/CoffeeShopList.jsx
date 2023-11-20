@@ -4,7 +4,7 @@ import axios from "axios";
 import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
 import CoffeeShopItem from "./CoffeeShopItem";
 import StyledText from "./StyledText";
-import backgroundCoffeeShopList from "../../assets/images/backgroundCoffeeShopList.jpg";
+import backgroundCoffeeShopList from "../../assets/images/background2.jpeg";
 
 const CoffeeShopList = ({ navigation, route }) => {
   let variable = route.params.coffeeName;
